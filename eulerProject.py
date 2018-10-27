@@ -25,3 +25,27 @@ def euler2():
         i += 1
     return soma
 
+#Check if number is a prime number
+def isPrime(x):
+    soma = 0
+    i = 1
+    while i <= x:
+        if x % i == 0:
+            soma = soma + 1
+        i += 1
+    if soma == 2:
+        return True
+    else:
+        return False
+
+#Problem 3
+def euler3():
+    x = 600851475143
+    i = 1
+    primes = []
+    while i <= x:
+        if x % i == 0:
+            if isPrime(i):
+                primes = primes + [i]
+        i += 1
+    return max(primes)
