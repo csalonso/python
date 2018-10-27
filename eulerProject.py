@@ -37,6 +37,34 @@ def isPrime(x):
         return True
     else:
         return False
+   
+#reverse String
+def reverse(x):
+    x = x[::-1]
+    return x
+
+#check if a string is a palindrome
+def isPalindrome(x):
+    if str(x) == reverse(str(x)):
+        return True
+    else:
+        return False
+
+#Problem 4
+def euler4():
+    a = 100
+    b = 100
+    palindrome = 0
+    while a < 1000:
+        b = 0
+        while b < 1000:
+            c = a * b
+            if isPalindrome(c):
+                if c > palindrome:
+                    palindrome = c
+            b += 1
+        a += 1
+    return palindrome
 
 #Problem 3
 def euler3():
