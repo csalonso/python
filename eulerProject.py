@@ -37,6 +37,18 @@ def isPrime(x):
         return True
     else:
         return False
+    
+#Problem 3
+def euler3():
+    x = 600851475143
+    i = 1
+    primes = []
+    while i <= x:
+        if x % i == 0:
+            if isPrime(i):
+                primes = primes + [i]
+        i += 1
+    return max(primes)
    
 #reverse String
 def reverse(x):
@@ -66,14 +78,4 @@ def euler4():
         a += 1
     return palindrome
 
-#Problem 3
-def euler3():
-    x = 600851475143
-    i = 1
-    primes = []
-    while i <= x:
-        if x % i == 0:
-            if isPrime(i):
-                primes = primes + [i]
-        i += 1
-    return max(primes)
+
