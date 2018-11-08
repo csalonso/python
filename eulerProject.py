@@ -78,4 +78,20 @@ def euler4():
         a += 1
     return palindrome
 
+#Problem 5
+def euler5():
+    a = 1
+    b = 0
+    soma = 0
+    while soma < 20:
+        soma = 0
+        a = 1
+        b += 20
+        while a <= 20:
+            if b != 0:
+                if b % a == 0:
+                    soma += 1
+            a += 1
+    print(b)
+
 
