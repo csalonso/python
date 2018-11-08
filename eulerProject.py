@@ -92,6 +92,21 @@ def euler5():
                 if b % a == 0:
                     soma += 1
             a += 1
-    print(b)
+    return b
 
-
+#Problem 6
+def euler6():
+    sumOfSquare = 0
+    sumSquare = 0
+    diff = 0
+    a = 0
+    while a <= 100:
+        sumOfSquare = sumOfSquare + a ** 2
+        a += 1
+    a = 0
+    while a <= 100:
+        sumSquare = sumSquare + a
+        a += 1
+    sumSquare = sumSquare ** 2
+    diff = sumSquare - sumOfSquare
+    return diff
