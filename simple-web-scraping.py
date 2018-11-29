@@ -1,10 +1,9 @@
-#Simple web scraping using BeautifulSoup
-
 #imports
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 from urllib.error import HTTPError
 from urllib.error import URLError
+from collections import Counter
 
 try:
     #conectar a pagina
@@ -30,9 +29,12 @@ else:
     print(texto)
 
     #conta quantas vezes uma palavra aparece no texto
-    print('"agile" occurs ' + str(texto.lower().count('agile')) + ' times in the text')
+    print('"agile" occurs ' + str(texto.lower().split().count('agile')) + ' times in the text')
 
     #verifica se uma palavra esta presente no texto
     if 'software' in texto:
         print('"software" occurs in the text')
 
+    #exibe as 5 palavars que mais aparecem no texto
+    c = Counter(texto.lower().split()).most_common(5)
+    print(c)
