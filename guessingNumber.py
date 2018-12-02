@@ -1,14 +1,14 @@
 import random
 
-def guessingNumber():
+def guessing_number():
     number = random.randint(0, 100)
-    userInput = int(input('Digite um número: '))
-    while (userInput != number):
+    user_input = int(input('Digite um número: '))
+    while (user_input != number):
         print('Errou')
-        if(userInput > number):
+        if(user_input > number):
             print('Alto')
         else:
             print('Baixo')
-        userInput = int(input('Digite um número: '))
+        user_input = int(input('Digite um número: '))
     print('Acertou')
     
